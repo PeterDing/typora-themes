@@ -1,0 +1,28 @@
+#typora-sidebar, body {
+    background-color: #fffffc;
+}
+
+#typora-sidebar, h1, h2, h3 {
+    font-family: 'Futura', sans-serif;
+}
+
+body {
+    font-family: 'Palatino', serif;
+    padding: 4em;
+    margin: auto;
+    max-width: 60ch;
+}
+
+h1, h2, h3, a {
+    color: #468;
+}
+
+code, pre, .md-fences, #typora-source {
+    background-color: #f6f6f6;
+    font-family: 'Victor Mono', 'Courier New', monospace;
+}
+
+blockquote {
+    border-left: 4px solid #abb;
+    padding-left: 16px;
+}
