@@ -1,5 +1,4 @@
-# My Favorite Typora Themes
+The built-in CSS will be replaced after update / reinstall, DO NOT MODIFY THEM.
 
-There are some typora themes I used. They are from https://theme.typora.io. Some ones are modified by me.
-
-Now, I use the `vue` theme.
+Refer https://support.typora.io/Add-Custom-CSS/ when you want to modify those CSS.
+Refer https://support.typora.io/About-Themes/ if you want to create / install new themes. 

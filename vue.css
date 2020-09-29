@@ -1,12 +1,13 @@
 @import "vue/fonts.css";
 
 :root {
-  --side-bar-bg-color: #fafafa;
+  --side-bar-bg-color: #F8F1E3;
   --control-text-color: #777;
   --font-sans-serif: "Futura", "Source Sans Pro", sans-serif !important;
   /* --font-serif: "Palatino", "Source Sans Pro", serif !important; */
   --font-serif: "Ubuntu", "Source Sans Pro", serif !important;
   --font-monospace: "Fira Code", "Roboto Mono", monospace !important;
+  --bg-color: #F8F1E3;
 }
 
 html {
