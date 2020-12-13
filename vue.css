@@ -1,13 +1,13 @@
 @import "vue/fonts.css";
 
 :root {
-  --side-bar-bg-color: #F8F1E3;
+  --side-bar-bg-color: #f8f1e3;
   --control-text-color: #777;
   --font-sans-serif: "Futura", "Source Sans Pro", sans-serif !important;
   /* --font-serif: "Palatino", "Source Sans Pro", serif !important; */
   --font-serif: "Ubuntu", "Source Sans Pro", serif !important;
   --font-monospace: "Fira Code", "Roboto Mono", monospace !important;
-  --bg-color: #F8F1E3;
+  --bg-color: #f8f1e3;
 }
 
 html {
@@ -310,7 +310,7 @@ table tr td:last-child {
   margin: 0.8rem 0 !important;
   padding: 0.3rem 0 !important;
   line-height: 1.43rem;
-  background-color: #f8f8f8 !important;
+  background-color: #fff9ef !important; /* Code background*/
   border-radius: 2px;
   font-family: var(--font-monospace);
   font-size: 0.85rem;
@@ -319,6 +319,10 @@ table tr td:last-child {
 
 #write .CodeMirror-wrap .CodeMirror-code pre {
   padding-left: 12px;
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+  background: rgba(100, 255, 255, 0.1);
 }
 
 #write code,
