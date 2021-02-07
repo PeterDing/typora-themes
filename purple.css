@@ -26,7 +26,7 @@
     "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU,
     "Ubuntu", "Source Sans Pro", serif;
   --em-font: "EB Garamond", Georgia, "Nimbus Roman No9 L",
-    "Noto Serif CJK SC" ， "Songti SC", "Source Han Serif SC",
+    "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC",
     "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun,
     SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN",
     "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU,
@@ -259,6 +259,7 @@ blockquote {
   color: var(--light-text-color);
   background-color: var(--purple-light-1);
   font-family: var(--quota-font);
+  /* font-size: 18px; */
 }
 
 /* 表格 */
@@ -337,7 +338,7 @@ thead {
   padding: 0 5px 0 2px;
   font-family: var(--em-font);
   /* font-style: normal; */
-  font-size: 18px;
+  /* font-size: 18px; */
   /* color: #4abdeb; */
   color: var(--text-color);
 }
@@ -366,8 +367,8 @@ tt {
 #write mark {
   background-color: rgb(255, 217, 255);
   border-radius: 2px;
-  padding: 2px 4px;
-  margin: 0 2px;
+  padding: 2px 1px;
+  margin: 0 0px;
   color: var(--text-color);
 }
 
