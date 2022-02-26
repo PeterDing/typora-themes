@@ -123,7 +123,7 @@ html {
   background-color: #2b2b2b
 }
 body {
-  font-family: "SF UI Text","PingFang SC",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","微软雅黑",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   color: #a9b7c6;
   line-height: 1.5;
   font-weight: 300
@@ -353,7 +353,7 @@ code,
 tt {
   font-size: 90%;
   border-radius: 3px;
-  font-family: "SF Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace,"PingFang SC","Microsoft YaHei","微软雅黑"
+  font-family: "SF Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace
 }
 code,
 tt {
@@ -397,7 +397,7 @@ tt {
 .md-image > .md-meta {
   border: 1px solid #ddd;
   border-radius: 3px;
-  font-family: "SF Mono",Consolas,"PingFang SC","Liberation Mono",Courier,monospace,"Microsoft YaHei","微软雅黑";
+  font-family: "SF Mono",Consolas,"Liberation Mono",Courier,monospace;
   padding: 2px 4px 0;
   font-size: .9em;
   color: inherit
@@ -438,7 +438,7 @@ tt {
 .megamenu-content,
 footer,
 header {
-  font-family: "SF UI Text","PingFang SC",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","微软雅黑",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
 }
 .file-node-content:hover .file-node-icon,
 .file-node-content:hover .file-node-open-state {
@@ -465,7 +465,7 @@ strong {
 }
 .file-list-item-summary {
   color: #77818c;
-  font-family: "SF UI Text","PingFang SC",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","微软雅黑",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
 }
 .active > .file-list-item-summary {
   color: #b8c8d9

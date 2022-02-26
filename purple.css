@@ -1,36 +1,28 @@
 :root {
-  --control-text-color: #777;
-  --select-text-bg-color: #ebe1f5;
-  --search-select-bg-color: #8163bd;
-
-  --title-color: /* #6c549c */ #79589F;
-  --text-color: #333333;
+  --title-color: #8064a9;
+  --text-color: #444444;
   --light-text-color: #666666;
+  --link-color: #2aa899;
+  --code-color: #745fb5;
 
-  --link-color: #745fb5;;
-  --code-color: #ff79c6;
-  --purple-light-1: rgba(116, 95, 181, 0.05);
-  --purple-light-2: rgba(116, 95, 181, 0.1);
-  --purple-light-3: rgba(116, 95, 181, 0.3);
-  --purple-light-4: rgba(116, 95, 181, 0.7);
-  --purple-light-5: rgba(116, 95, 181, 0.8);
+  --shadow-color: rgba(116, 95, 181, 0.1);
+  --purple-light: rgba(116, 95, 181, 0.3);
   --border: #eee;
+  --shadow: 0rem 0.2rem 0.4rem var(--shadow-color);
 
-  --shadow: 0rem 0.2rem 0.4rem var(--purple-light-2);
-
-  /* side bar */
-  --side-bar-bg-color: #f7f7fb;
+  --side-bar-bg-color: #fafafa;
+  --control-text-color: var(var(--light-text-color));
   --active-file-text-color: var(--title-color);
-  --active-file-bg-color: var(--purple-light-2);
-  --item-hover-bg-color: var(--purple-light-2);
-  --active-file-border-color: var(--purple-light-4);
+  --active-file-bg-color: var(--shadow-color);
+  --item-hover-bg-color: var(--shadow-color);
+  --active-file-border-color: var(var(--title-color));
 
   --base-font: "Helvetica Neue", "Noto Sans", -apple-system, Ubuntu,
     "Microsoft YaHei", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans",
     "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
     "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
     SimHei, "WenQuanYi Zen Hei Sharp", "Source Sans Pro", sans-serif;
-  --title-font: "EB Garamond", Georgia, "Noto Serif", "Noto Serif CJK SC", 
+  --title-font: "EB Garamond", Georgia, "Noto Serif", "Noto Serif CJK SC",
     "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC",
     "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun,
     SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN",
@@ -39,6 +31,30 @@
   --monospace: "JetBrains Mono", "Fira Code", "Cascadia Code", "Sarasa Term SC",
     Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono",
     "Roboto Mono", Courier, Monospace !important;
+}
+
+/* 打印 */
+@media print {
+  html {
+    font-size: 0.9rem;
+  }
+
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    word-wrap: break-word;
+  }
+  #write {
+    max-width: 100%;
+  }
+  @page {
+    size: A4; /* PDF A4 */
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 html {
@@ -87,12 +103,12 @@ a {
   border-bottom: none;
 }
 #write a:hover {
-  border-bottom: 1px dashed var(--purple-light-4);
-  color: var(--purple-light-4);
+  border-bottom: 1px solid var(--link-color);
+  color: var(--link-color);
   text-decoration: none;
 }
 .md-content {
-  color: var(--purple-light-4);
+  color: var(--light-text-color);
 }
 
 h1,
@@ -102,49 +118,19 @@ h4,
 h5,
 h6 {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  line-height: 1.4;
+  line-height: 1.3;
   cursor: text;
   color: var(--title-color);
   font-family: var(--title-font);
 }
 
-h1 tt,
-h1 code {
-  font-size: inherit !important;
-}
-h2 tt,
-h2 code {
-  font-size: inherit !important;
-}
-h3 tt,
-h3 code {
-  font-size: inherit !important;
-}
-h4 tt,
-h4 code {
-  font-size: inherit !important;
-}
-h5 tt,
-h5 code {
-  font-size: inherit !important;
-}
-h6 tt,
-h6 code {
-  font-size: inherit !important;
-}
-
-h1 {
-  padding-bottom: 0.4rem;
-  font-size: 2.2rem;
-  line-height: 1.3;
-}
 h1 {
   text-align: center;
   font-size: 2.25em;
-  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 h1:after {
   content: "";
@@ -157,23 +143,21 @@ h1:after {
 
 h2 {
   padding-left: 0.4em;
-  line-height: 1.4;
   font-size: 1.75em;
-  border-left: 9px solid var(--title-color);
+  border-left: 0.4em solid var(--title-color);
   border-bottom: 1px solid var(--title-color);
 }
 h3 {
   font-size: 1.5em;
-  line-height: 1.43;
 }
 h4 {
-  font-size: 1.25em;
+  font-size: 1.3em;
 }
 h5 {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 h6 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 p,
@@ -224,14 +208,13 @@ ul li {
 
 /* 引用 */
 blockquote {
-  border-left: 0.2em solid var(--purple-light-3);
+  border-left: 0.2em solid var(--purple-light);
   padding-left: 1em;
   color: var(--light-text-color);
   font-family: var(--base-font);
 }
 
 /* 表格 */
-
 table {
   margin-bottom: 1.25rem;
 }
@@ -248,10 +231,6 @@ table th {
 table thead th {
   vertical-align: middle;
 }
-
-/* 表格 背景色 */
-
-/* 表格 背景色 */
 table tr:nth-child(2n),
 thead {
   background-color: #fcfcfc;
@@ -269,27 +248,24 @@ tt {
   padding: 2px 4px;
   border-radius: 0.3rem;
   font-family: var(--monospace);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--code-color);
-  background-color: var(--purple-light-1);
-}
-
-tt {
+  background-color: #f4f2f9;
   margin: 0 2px;
 }
 
 #write .md-footnote {
-  background-color: var(--purple-light-1);
   color: var(--code-color);
+  background-color: #f4f2f9;
 }
 
 /* highlight. */
 #write mark {
-  background-color: var(--select-text-bg-color);
+  background-color: #f9f2f4;
   border-radius: 0.3rem;
   padding: 2px 4px;
   margin: 0 2px;
-  color: var(--text-color);
+  color: #c7254e;
 }
 
 #write del {
@@ -298,21 +274,6 @@ tt {
 
 .md-task-list-item > input {
   margin-left: -1.3em;
-}
-
-@media print {
-  html {
-    font-size: 0.9rem;
-  }
-
-  table,
-  pre {
-    page-break-inside: avoid;
-  }
-
-  pre {
-    word-wrap: break-word;
-  }
 }
 
 #write pre.md-meta-block {
@@ -347,7 +308,7 @@ tt {
 
 /* 写![shadow-...]() 显示图片阴影 */
 img[alt|="shadow"] {
-  box-shadow: 0rem 0.4rem 0.8rem var(--purple-light-2);
+  box-shadow: 0rem 0.4rem 0.8rem var(--shadow-color);
 }
 
 #write a.md-toc-inner {
@@ -376,9 +337,6 @@ footer {
 .html-for-mac .context-menu {
   --item-hover-bg-color: #e6f0fe;
 }
-
-/* 代码框 */
-/* CodeMirror 3024 Day theme */
 
 /* 代码段 背景 */
 pre {
@@ -423,90 +381,11 @@ pre {
 .cm-s-inner .CodeMirror-line > span::-moz-selection,
 .cm-s-inner .CodeMirror-line > span > span::selection,
 .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
-  background: var(--purple-light-1);
-}
-
-.cm-s-inner span.cm-comment {
-  color: #cdab53;
-}
-
-.cm-s-inner span.cm-string,
-.cm-s-inner span.cm-string-2 {
-  color: #f2b01d;
-}
-
-.cm-s-inner span.cm-number {
-  color: #a34e8f;
-}
-
-.cm-s-inner span.cm-variable {
-  color: #01a252;
-}
-
-.cm-s-inner span.cm-variable-2 {
-  color: #01a0e4;
-}
-
-.cm-s-inner span.cm-def {
-  color: var(--text-color);
-}
-
-.cm-s-inner span.cm-operator {
-  color: #ff79c6;
-}
-
-.cm-s-inner span.cm-keyword {
-  color: #db2d20;
-}
-
-.cm-s-inner span.cm-atom {
-  color: #a34e8f;
-}
-
-.cm-s-inner span.cm-meta {
-  color: inherit;
-}
-
-.cm-s-inner span.cm-tag {
-  color: #db2d20;
-}
-
-.cm-s-inner span.cm-attribute {
-  color: #01a252;
-}
-
-.cm-s-inner span.cm-qualifier {
-  color: #388aa3;
-}
-
-.cm-s-inner span.cm-property {
-  color: #01a252;
-}
-
-.cm-s-inner span.cm-builtin {
-  color: #388aa3;
-}
-
-.cm-s-inner span.cm-variable-3,
-.cm-s-inner span.cm-type {
-  color: #ffb86c;
-}
-
-.cm-s-inner span.cm-bracket {
-  color: #3a3432;
-}
-
-.cm-s-inner span.cm-link {
-  color: #a34e8f;
-}
-
-.cm-s-inner span.cm-error {
-  background: #db2d20;
-  color: #5c5855;
+  background: var(--shadow-color);
 }
 
 .md-fences.md-focus .cm-s-inner .CodeMirror-activeline-background {
-  background: var(--purple-light-1);
+  background: var(--shadow-color);
 }
 
 .cm-s-inner .CodeMirror-matchingbracket {
@@ -516,6 +395,13 @@ pre {
 
 #fences-auto-suggest .active {
   background: #ddd;
+}
+
+.cm-s-inner span.cm-comment {
+  color: #9daab6;
+}
+.cm-s-inner span.cm-builtin {
+  color: #0451a5;
 }
 
 /* language tip */
@@ -582,7 +468,8 @@ pre {
 
 #write .md-task-list-item.task-list-done > p {
   color: #b4b4b4;
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
+  text-decoration: underline;
 }
 
 #write .md-task-list-item.task-list-done > p > .md-emoji {
@@ -593,70 +480,11 @@ pre {
   opacity: 0.6;
 }
 
-/* sidebar and outline */
-.pin-outline .outline-active {
-  color: var(--active-file-text-color);
-}
-
+/* sidebar */
 #typora-sidebar,
 .typora-node #typora-sidebar {
-  box-shadow: 3px 0px 10px var(--purple-light-2);
+  box-shadow: 3px 0px 10px var(--shadow-color);
 }
-
-.file-list-item {
-  border-bottom: 1px solid;
-  border-color: var(--purple-light-2);
-}
-
-.file-list-item-summary {
-  font-weight: normal;
-}
-
-.file-list-item.active {
-  color: var(--active-file-text-color);
-  background-color: var(--purple-light-2);
-}
-
-.file-tree-node.active > .file-node-background {
-  background-color: var(--purple-light-2);
-  font-weight: normal;
-}
-
-.file-tree-node.active > .file-node-content {
-  color: var(--active-file-text-color);
-  font-weight: normal;
-}
-
-.sidebar-tabs {
-  border-bottom: none;
-}
-.sidebar-tab.active {
-  font-weight: normal;
-}
-.info-panel-tab-border {
-  color: var(--purple-light-4);
-}
-
 .sidebar-content-content {
   font-size: 0.9rem;
-}
-
-/* 搜索 */
-.ty-file-search-match-text {
-  background-color: var(--purple-light-3);
-}
-.md-search-hit {
-  background-color: var(--purple-light-3);
-  contain: style;
-}
-
-element.style {
-  width: calc(100% - 18px);
-}
-#file-library-search-input:focus {
-  border-color: var(--purple-light-3);
-}
-.code-tooltip .ty-input:focus,
-input:focus {
-  border-color: var(--purple-light-3);
 }

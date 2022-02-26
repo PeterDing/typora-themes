@@ -57,6 +57,7 @@ pre {
 
 html {
 	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
 html, body {
@@ -583,6 +584,7 @@ input {
 
 .dropdown-menu .divider {
 	border-color: #e5e5e5;
+	opacity: 1;
 }
 
 /* https://github.com/typora/typora-issues/issues/2046 */
@@ -607,4 +609,13 @@ input {
 .searchpanel-search-option-btn.active {
 	background: #777;
 	color: white;
+}
+
+.export-detail, .light .export-detail, 
+.light .export-item.active, 
+.light .export-items-list-control {
+	background: #e0e0e0;
+	border-radius: 2px;
+	font-weight: 700;
+	color: inherit
 }
